@@ -12,6 +12,7 @@ export const Container = styled.div`
     font-size: 20px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     color: #4c7c6c;
 
