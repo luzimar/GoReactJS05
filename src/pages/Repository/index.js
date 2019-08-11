@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-
+import { BounceLoader } from 'react-spinners';
 import Container from '../../components/Container';
 import { Loading, Owner, IssueList } from './styles';
 import api from '../../services/api';
@@ -33,7 +33,13 @@ export default function Repository({ match }) {
   return (
     <>
       {loading ? (
-        <Loading>Carregando</Loading>
+        <Loading>
+        <BounceLoader  sizeUnit={"px"}
+        size={60}
+        color={'#fff'}
+        loading={true}/>
+        </Loading>
+
       ) : (
         <Container>
           <Owner>
